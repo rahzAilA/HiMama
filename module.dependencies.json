@@ -1,0 +1,84 @@
+{
+  "modules": [
+    {
+      "type": "classroomsModule",
+      "mode": "folder",
+      "pattern": ["modules/classrooms"],
+      "capture": ["family", "elementName"]
+    },
+    {
+      "type": "accountModule",
+      "mode": "folder",
+      "pattern": ["modules/account"],
+      "capture": ["family", "elementName"]
+    },
+    {
+      "type": "coreComponents",
+      "mode": "folder",
+      "pattern": ["src/components"]
+    },
+    {
+      "type": "coreTheme",
+      "pattern": ["src/theme"]
+    },
+    {
+      "type": "coreHooks",
+      "mode": "folder",
+      "pattern": ["src/hooks"]
+    },
+    {
+      "type": "coreNavigation",
+      "mode": "folder",
+      "pattern": ["src/navigation"],
+      "capture": ["family", "elementName"]
+    },
+    {
+      "type": "coreScreens",
+      "mode": "folder",
+      "pattern": ["src/screens"],
+      "capture": ["family", "elementName"]
+    },
+    {
+      "type": "coreServices",
+      "mode": "folder",
+      "pattern": ["src/services"]
+    },
+    {
+      "type": "coreUtils",
+      "mode": "folder",
+      "pattern": ["src/utils"]
+    },
+    {
+      "type": "coreTypes",
+      "mode": "folder",
+      "pattern": ["src/types"]
+    },
+    {
+      "type": "app",
+      "mode": "file",
+      "pattern": ["App.tsx"]
+    }
+  ],
+  "dependencies": [
+    {
+      "from": "classroomsModule",
+      "allow": []
+    },
+    {
+      "from": "accountModule",
+      "allow": []
+    },
+    {
+      "from": "navigation",
+      "allow": [["classroomsModule", { "family": "public" }]]
+    },
+    {
+      "from": "app",
+      "allow": ["corescreens", "coreNavigation"]
+    },
+    {
+      "from": "coreScreens",
+      "allow": ["coreComponents"]
+    }
+  ]
+}
