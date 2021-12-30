@@ -4,6 +4,7 @@ import { RootRoutes } from "./routes";
 
 export type RootStackParamList = {
   [RootRoutes.ClassroomNavigator]: undefined;
+  [RootRoutes.NoNetwork]: undefined;
   [RootRoutes.Error]: undefined;
 };
 
