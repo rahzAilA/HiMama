@@ -7,7 +7,11 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx"
+    "lint": "yarn lint:js && yarn lint:ts && yarn prettier:check",
+    "lint:js": "eslint '**/*.{js,ts,tsx}'",
+    "lint:ts": "tsc -p tsconfig.json --noEmit",
+    "prettier": "prettier --write '**/*.{ts,tsx}'",
+    "prettier:check": "prettier --check '**/*.{ts,tsx}'"
   },
   "dependencies": {
     "react": "17.0.2",
