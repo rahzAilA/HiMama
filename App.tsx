@@ -2,12 +2,18 @@ import "react-native-gesture-handler";
 
 import { SplashScreen } from "~/components";
 import { NavigationContainer, RootStackNavigator } from "~/navigation";
+import { DatabaseContextProvider } from "~/services/database";
+import { FlagsProvider } from "~/services/flags";
 
 export function App() {
   return (
     <NavigationContainer>
-      <SplashScreen />
-      <RootStackNavigator />
+      <DatabaseContextProvider>
+        <FlagsProvider>
+          <SplashScreen />
+          <RootStackNavigator />
+        </FlagsProvider>
+      </DatabaseContextProvider>
     </NavigationContainer>
   );
 }
