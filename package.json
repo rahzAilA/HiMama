@@ -7,6 +7,7 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
+    "build:android": "npx react-native run-android --variant=release",
     "lint": "yarn lint:js && yarn lint:ts && yarn prettier:check",
     "lint:js": "eslint '**/*.{js,ts,tsx}'",
     "lint:ts": "tsc -p tsconfig.json --noEmit",
