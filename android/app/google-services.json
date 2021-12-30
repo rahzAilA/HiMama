@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "361178096347",
+    "firebase_url": "https://himama-007-default-rtdb.firebaseio.com",
+    "project_id": "himama-007",
+    "storage_bucket": "himama-007.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:361178096347:android:95bd37df68123aee6aa2fe",
+        "android_client_info": {
+          "package_name": "com.imaliazhar.himama"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "361178096347-cg22u318aus8pusj71ruuedq2ic8u3sq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB5ghS3a13JfJsuTqmhznFdkWTZSzogaG8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "361178096347-cg22u318aus8pusj71ruuedq2ic8u3sq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
