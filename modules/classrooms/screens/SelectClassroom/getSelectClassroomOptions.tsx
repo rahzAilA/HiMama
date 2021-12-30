@@ -6,5 +6,6 @@ import { SelectClassroomHeader } from "./components";
 
 export const getSelectClassroomOptions = (): StackNavigationOptions =>
   createNavigationHeaderConfig({
+    presentation: "modal",
     headerTitle: () => <SelectClassroomHeader />,
   });

@@ -8,12 +8,15 @@ export const createNavigationHeaderConfig = ({
   headerTitle,
   headerControls,
   headerStyle,
+  presentation,
 }: {
   headerTitle: () => ReactElement;
   headerControls?: () => ReactElement;
   headerStyle?: ViewStyle;
+  presentation?: "modal";
 }): StackNavigationOptions => ({
   headerTitle,
+  presentation,
   headerRight: headerControls,
   headerTitleAlign: "left" as const,
   headerRightContainerStyle: {
