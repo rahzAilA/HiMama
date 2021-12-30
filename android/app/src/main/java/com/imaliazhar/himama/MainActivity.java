@@ -5,6 +5,7 @@ import com.facebook.react.ReactActivity;
 
 import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.ReactRootView;
+import com.swmansion.gesturehandler.react.RNGestureHandlerEnabledRootView;
 
 public class MainActivity extends ReactActivity {
 
@@ -17,4 +18,22 @@ public class MainActivity extends ReactActivity {
     return "HiMama";
   }
 
+  /**
+   * This change is required to avoid crashes related to View state being not persisted
+   * consistently across Activity restarts.
+   */
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(null);
+  }
+
+  @Override
+  protected ReactActivityDelegate createReactActivityDelegate() {
+    return new ReactActivityDelegate(this, getMainComponentName()) {
+      @Override
+      protected ReactRootView createRootView() {
+       return new RNGestureHandlerEnabledRootView(MainActivity.this);
+      }
+    };
+  }
 }
